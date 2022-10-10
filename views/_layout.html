@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tour de France 2023 imaginé</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" >
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/bootstrap.css" >
+        <link rel="stylesheet" href="/css/styles.css" >
+    {% endblock %}
+</head>
+<body>
+    {% include(nav.html) %}
+    {% with messages = get_flashed_messages() %}
+         <br>
+        {% if messages %}
+            <div class="alert alert-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="container">
+        {% block body %}
+            <h2 style="color:black"><b>auth/layout.html</b></h2>
+            Site d'un Tour de France 2023 imaginé
+        {% endblock %}
+    </div>
+
+
+    {% block javascripts %}
+        <script src="/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="/js/popper.min.js" ></script>
+        <script src="/js/bootstrap.js" ></script>
+    {% endblock %}
+
+</body>
+</html>

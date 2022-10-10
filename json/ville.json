@@ -1,0 +1,54 @@
+{
+  "ville_depart": [
+    {"id_ville_depart": 1,"libelle_ville_depart": "Bilbao","id_pays": 2},
+    {"id_ville_depart": 2,"libelle_ville_depart": "Vitoria-Gasteiz","id_pays": 2},
+    {"id_ville_depart": 3,"libelle_ville_depart": "Amorebieta-Etxano","id_pays": 2},
+    {"id_ville_depart": 4,"libelle_ville_depart": "Saint-Geours-de-Marenne","id_pays": 1},
+    {"id_ville_depart": 5,"libelle_ville_depart": "Royan","id_pays": 1},
+    {"id_ville_depart": 6,"libelle_ville_depart": "Cognac","id_pays": 1},
+    {"id_ville_depart": 7,"libelle_ville_depart": "Sarran","id_pays": 1},
+    {"id_ville_depart": 8,"libelle_ville_depart": "Cournon d’Auvergne","id_pays": 1},
+    {"id_ville_depart": 9,"libelle_ville_depart": "Aurillac","id_pays": 1},
+    {"id_ville_depart": 10,"libelle_ville_depart": "Laguiole","id_pays": 1},
+    {"id_ville_depart": 11,"libelle_ville_depart": "Fleurance","id_pays": 1},
+    {"id_ville_depart": 12,"libelle_ville_depart": "Pau","id_pays": 1},
+    {"id_ville_depart": 13,"libelle_ville_depart": "Salies-du-Salat","id_pays": 1},
+    {"id_ville_depart": 14,"libelle_ville_depart": "Lavelanet","id_pays": 1},
+    {"id_ville_depart": 15,"libelle_ville_depart": "Port-Barcarès","id_pays": 1},
+    {"id_ville_depart": 16,"libelle_ville_depart": "Nîmes","id_pays": 1},
+    {"id_ville_depart": 17,"libelle_ville_depart": "Valensole","id_pays": 1},
+    {"id_ville_depart": 18,"libelle_ville_depart": "Embrun","id_pays": 1},
+    {"id_ville_depart": 19,"libelle_ville_depart": "Briançon","id_pays": 1},
+    {"id_ville_depart": 20,"libelle_ville_depart": "Saint-Jean-de-Maurienne","id_pays": 1},
+    {"id_ville_depart": 21,"libelle_ville_depart": "Maurepas","id_pays": 1}
+  ],
+
+  "ville_arrivee": [
+    {"id_ville_arrivee": 1,"libelle_ville_arrivee": "Bilbao","id_pays": 2},
+    {"id_ville_arrivee": 2,"libelle_ville_arrivee": "Donostia San Sebsatian","id_pays": 2},
+    {"id_ville_arrivee": 3,"libelle_ville_arrivee": "Bayonne","id_pays": 1},
+    {"id_ville_arrivee": 4,"libelle_ville_arrivee": "Cap Ferret","id_pays": 1},
+    {"id_ville_arrivee": 5,"libelle_ville_arrivee": "Royan","id_pays": 1},
+    {"id_ville_arrivee": 6,"libelle_ville_arrivee": "Tulle","id_pays": 1},
+    {"id_ville_arrivee": 7,"libelle_ville_arrivee": "Chastreix-Sancy","id_pays": 1},
+    {"id_ville_arrivee": 8,"libelle_ville_arrivee": "Saint-Flour","id_pays": 1},
+    {"id_ville_arrivee": 9,"libelle_ville_arrivee": "Murat","id_pays": 1},
+    {"id_ville_arrivee": 10,"libelle_ville_arrivee": "Montauan","id_pays": 1},
+    {"id_ville_arrivee": 11,"libelle_ville_arrivee": "Pau","id_pays": 1},
+    {"id_ville_arrivee": 12,"libelle_ville_arrivee": "Piau-Engaly","id_pays": 1},
+    {"id_ville_arrivee": 13,"libelle_ville_arrivee": "Plateau de Beille","id_pays": 1},
+    {"id_ville_arrivee": 14,"libelle_ville_arrivee": "Narbonne","id_pays": 1},
+    {"id_ville_arrivee": 15,"libelle_ville_arrivee": "Col de Mantet","id_pays": 1},
+    {"id_ville_arrivee": 16,"libelle_ville_arrivee": "Toulon","id_pays": 1},
+    {"id_ville_arrivee": 17,"libelle_ville_arrivee": "Digne-les-Bains","id_pays": 1},
+    {"id_ville_arrivee": 18,"libelle_ville_arrivee": "Embrun","id_pays": 1},
+    {"id_ville_arrivee": 19,"libelle_ville_arrivee": "Val-Cenis","id_pays": 1},
+    {"id_ville_arrivee": 20,"libelle_ville_arrivee": "La Plagne","id_pays": 1},
+    {"id_ville_arrivee": 21,"libelle_ville_arrivee": "Paris Champs-Élysées","id_pays": 1}
+  ],
+
+  "ville_repos": [
+    {"id_ville_repos": 1,"nom_ville_repos": "Département du Puy-de-Dôme","date_repos": "2023-07-10"},
+    {"id_ville_repos": 2,"nom_ville_repos": "Nîmes","date_repos": "2023-07-17"}
+  ]
+}

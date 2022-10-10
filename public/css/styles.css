@@ -1,0 +1,59 @@
+h1 { color: #28B3FB;}
+
+body {
+    background-color: white;
+}
+
+br , h2 {
+    color: black;
+}
+
+table {
+    text-align: center;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+#imgtab {
+    width: 40px;
+}
+
+::selection {
+    background-color: yellow;
+    color: #0056b3;
+}
+
+.image_nav {
+    height: 31px;
+    width: 40px;
+    padding-right: 5px;
+}
+
+.rating {
+    width: 226px;
+    margin: 0 auto 1em;
+    font-size: 45px;
+    overflow:hidden;
+}
+.rating a {
+    float: right;
+    color: black;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+}
+.rating2 {
+    direction: rtl;
+}
+.rating2 a {
+    float:none
+}

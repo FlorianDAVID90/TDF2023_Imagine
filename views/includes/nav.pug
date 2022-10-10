@@ -1,0 +1,35 @@
+//https://getbootstrap.com/docs/4.0/components/navbar/
+
+nav(class="navbar navbar-expand-lg navbar-light bg-dark d-flex")
+    img(class="image_nav" src="/public/images/tdf_logo.png")
+    a(class="navbar-brand" style="color: white" href="/") Tour de France 2023
+    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+
+    div(class="collapse navbar-collapse" id="navbarSupportedContent")
+        ul(class="navbar-nav mr-auto")
+            li(class="nav-item dropdown")
+                a(class="nav-link dropdown-toggle" style="color: white" id="dropdownEtapes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Parcours
+                div(class="dropdown-menu" style="background-color: black;" aria-labelledby="dropdownEtapes")
+                    div(class="dropdown-divider")
+                    a(href="/carte-TDF-2023" class="btn btn-outline-warning align-content-center" data-bs-toogle="button") CARTE
+                    div(class="dropdown-divider")
+                    ul
+                        each etape in #{etapes}
+                            a(class="dropdown-item" style="color: white" href="/etape/#{etape.id}")
+                                li = etape
+
+                    div(class="dropdown-divider")
+
+            li(class="nav-item dropdown")
+                a(class="nav-link dropdown-toggle" style="color: white" id="dropdownEquipes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Equipes
+                div(class="dropdown-menu" style="background-color: black;" aria-labelledby="dropdownEquipes")
+                    div(class="dropdown-divider")
+                        ul
+                            each equipe in equipes
+                                a(class="dropdown-item" style="color: white" href="/equipe/{{ equipe.abrev_equipe }}")
+                                    img(src="/static/images/equipes/{{ equipe.img_maillot_equipe }}" style="height: 30px; width: 30px;")
+                                    li = equipe.img_maillot_equipe
+
+                    div(class="dropdown-divider")
+

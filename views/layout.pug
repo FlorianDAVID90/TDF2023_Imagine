@@ -1,0 +1,22 @@
+doctype html
+html(lang=fr)
+    head
+        meta(CHARSET="UFT-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        title Tour de France 2023 imaginé
+        block styles
+            link(rel="stylesheet" href="/css/bootstrap.css")
+            link(rel="stylesheet" href="/css/styles.css")
+
+    body
+        include includes/nav.pug
+        br
+
+        div(class="container")
+            block body
+                h2(style="color:black") Site d'un Tour de France 2023 imaginé
+
+        block scripts
+            script(src="/js/jquery-3.5.1.slim.min.js")
+            script(src="/js/popper.min.js")
+            script(src="/js/bootstrap.js")

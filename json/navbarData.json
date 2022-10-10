@@ -1,0 +1,7 @@
+{
+  "admin": false,
+  "navbarTitles": [
+    { "_id": 1, "href": "/", "title": "Acceuil", "active": true },
+    { "_id": 2, "href": "/carte-TDF-2023", "title": "Carte de l'édition 2023", "active": false }
+  ]
+}

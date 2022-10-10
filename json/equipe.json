@@ -1,0 +1,188 @@
+{
+  "equipe": [
+    {
+      "id_equipe": 1,
+      "nom_equipe": "Team Jumbo Visma",
+      "abrev_equipe": "TJV",
+      "img_equipe": "TJV.png",
+      "img_maillot_equipe": "TJV_maillot.png",
+      "id_pays": 11
+    },
+    {
+      "id_equipe": 2,
+      "nom_equipe": "UAE Team Emirates",
+      "abrev_equipe": "UAD",
+      "img_equipe": "UAD.png",
+      "img_maillot_equipe": "UAD_maillot.png",
+      "id_pays": 3
+    },
+    {
+      "id_equipe": 3,
+      "nom_equipe": "Team Ineos Grenadiers",
+      "abrev_equipe": "IGD",
+      "img_equipe": "IGD.png",
+      "img_maillot_equipe": "IGD_maillot.png",
+      "id_pays": 14
+    },
+    {
+      "id_equipe": 4,
+      "nom_equipe": "Groupama-FDJ",
+      "abrev_equipe": "GFC",
+      "img_equipe": "GFC.png",
+      "img_maillot_equipe": "GFC_maillot.png",
+      "id_pays": 1
+    },
+    {
+      "id_equipe": 5,
+      "nom_equipe": "Bora-Hansgrohe",
+      "abrev_equipe": "BOH",
+      "img_equipe": "BOH.png",
+      "img_maillot_equipe": "BOH_maillot.png",
+      "id_pays": 16
+    },
+    {
+      "id_equipe": 6,
+      "nom_equipe": "Team DSM",
+      "abrev_equipe": "DSM",
+      "img_equipe": "DSM.png",
+      "img_maillot_equipe": "DSM_maillot.png",
+      "id_pays": 16
+    },
+    {
+      "id_equipe": 7,
+      "nom_equipe": "AG2R Citroën Team",
+      "abrev_equipe": "ACT",
+      "img_equipe": "ACT.png",
+      "img_maillot_equipe": "ACT_maillot.png",
+      "id_pays": 1
+    },
+    {
+      "id_equipe": 8,
+      "nom_equipe": "Soudal Quick-Step Team",
+      "abrev_equipe": "SQS",
+      "img_equipe": "QST.png",
+      "img_maillot_equipe": "QST_maillot.png",
+      "id_pays": 12
+    },
+    {
+      "id_equipe": 9,
+      "nom_equipe": "Cofidis",
+      "abrev_equipe": "COF",
+      "img_equipe": "COF.png",
+      "img_maillot_equipe": "COF_maillot.png",
+      "id_pays": 1
+    },
+    {
+      "id_equipe": 10,
+      "nom_equipe": "Alpecin-Deceuninck",
+      "abrev_equipe": "ADC",
+      "img_equipe": "AFC.png",
+      "img_maillot_equipe": "AFC_maillot.png",
+      "id_pays": 12
+    },
+    {
+      "id_equipe": 11,
+      "nom_equipe": "Uno-X Pro Cycling Team",
+      "abrev_equipe": "UXT",
+      "img_equipe": "UXT.png",
+      "img_maillot_equipe": "UXT_maillot.png",
+      "id_pays": 31
+    },
+    {
+      "id_equipe": 12,
+      "nom_equipe": "Movistar Team",
+      "abrev_equipe": "MOV",
+      "img_equipe": "MOV.png",
+      "img_maillot_equipe": "MOV_maillot.png",
+      "id_pays": 2
+    },
+    {
+      "id_equipe": 13,
+      "nom_equipe": "Team Bahrain Victorious",
+      "abrev_equipe": "TBV",
+      "img_equipe": "TBV.png",
+      "img_maillot_equipe": "TBV_maillot.png",
+      "id_pays": 21
+    },
+    {
+      "id_equipe": 14,
+      "nom_equipe": "Team Arkéa-Samsic",
+      "abrev_equipe": "ARK",
+      "img_equipe": "ARK.png",
+      "img_maillot_equipe": "ARK_maillot.png",
+      "id_pays": 1
+    },
+    {
+      "id_equipe": 15,
+      "nom_equipe": "EF Education EasyPost",
+      "abrev_equipe": "EFE",
+      "img_equipe": "EFE.png",
+      "img_maillot_equipe": "EFE_maillot.png",
+      "id_pays": 10
+    },
+    {
+      "id_equipe": 16,
+      "nom_equipe": "Intermarché-Wanty-Gobert Matériaux",
+      "abrev_equipe": "IWG",
+      "img_equipe": "IWG.png",
+      "img_maillot_equipe": "IWG_maillot.png",
+      "id_pays": 12
+    },
+    {
+      "id_equipe": 17,
+      "nom_equipe": "Lotto-Dstny",
+      "abrev_equipe": "LTD",
+      "img_equipe": "LTS.png",
+      "img_maillot_equipe": "LTS_maillot.png",
+      "id_pays": 12
+    },
+    {
+      "id_equipe": 18,
+      "nom_equipe": "Team TotalEnergies",
+      "abrev_equipe": "TEN",
+      "img_equipe": "TEN.png",
+      "img_maillot_equipe": "TEN_maillot.png",
+      "id_pays": 1
+    },
+    {
+      "id_equipe": 19,
+      "nom_equipe": "",
+      "abrev_equipe": "",
+      "img_equipe": ".png",
+      "img_maillot_equipe": "_maillot.png",
+      "id_pays": 29
+    },
+    {
+      "id_equipe": 20,
+      "nom_equipe": "Trek-Segafredo",
+      "abrev_equipe": "TFS",
+      "img_equipe": "TFS.png",
+      "img_maillot_equipe": "TFS_maillot.png",
+      "id_pays": 10
+    },
+    {
+      "id_equipe": 21,
+      "nom_equipe": "Team BikeExchange-Jayco",
+      "abrev_equipe": "BEX",
+      "img_equipe": "BEX.png",
+      "img_maillot_equipe": "BEX_maillot.png",
+      "id_pays": 13
+    },
+    {
+      "id_equipe": 22,
+      "nom_equipe": "Israel Premier-Tech",
+      "abrev_equipe": "IPT",
+      "img_equipe": "IPT.png",
+      "img_maillot_equipe": "IPT_maillot.png",
+      "id_pays": 22
+    },
+    {
+      "id_equipe": 23,
+      "nom_equipe": "B&B Hotels-KTM",
+      "abrev_equipe": "BBK",
+      "img_equipe": "BBK.png",
+      "img_maillot_equipe": "BBK_maillot.png",
+      "id_pays": 1
+    }
+  ]
+}

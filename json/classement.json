@@ -1,0 +1,16 @@
+{
+  "type_classement": [
+    {"id_type_classement": 1, "libelle_type_classement": null},
+    {"id_type_classement": 2, "libelle_type_classement": "Classement à points"},
+    {"id_type_classement": 3, "libelle_type_classement": "Classement au temps"}
+  ],
+
+  "classement": [
+    {"id_classement": 1, "nom_classement": "Classement général","id_type_classement": 3},
+    {"id_classement": 2, "nom_classement": "Classement par points","id_type_classement": 2},
+    {"id_classement": 3, "nom_classement": "Classement de la montagne","id_type_classement": 2},
+    {"id_classement": 4, "nom_classement": "Classement des jeunes","id_type_classement": 3},
+    {"id_classement": 5, "nom_classement": "Prix de la combativité","id_type_classement": 1},
+    {"id_classement": 6, "nom_classement": "Classement par équipes","id_type_classement": 3}
+  ]
+}
