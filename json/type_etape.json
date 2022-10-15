@@ -1,0 +1,10 @@
+{
+  "type_etape": [
+    {"id_type_etape": 1, "libelle_type_etape": "Étape de plaine"},
+    {"id_type_etape": 2, "libelle_type_etape": "Étape accidentée"},
+    {"id_type_etape": 3, "libelle_type_etape": "Contre-la-montre individuel"},
+    {"id_type_etape": 4, "libelle_type_etape": "Contre-la-montre par équipes"},
+    {"id_type_etape": 5, "libelle_type_etape": "Étape de montagne"},
+    {"id_type_etape": 6, "libelle_type_etape": "Étape de haute-montagne"}
+  ]
+}

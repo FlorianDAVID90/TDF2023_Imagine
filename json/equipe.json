@@ -146,10 +146,10 @@
     },
     {
       "id_equipe": 19,
-      "nom_equipe": "",
-      "abrev_equipe": "",
-      "img_equipe": ".png",
-      "img_maillot_equipe": "_maillot.png",
+      "nom_equipe": "Astana Qazaqstan Team",
+      "abrev_equipe": "AST",
+      "img_equipe": "AST.png",
+      "img_maillot_equipe": "AST_maillot.png",
       "id_pays": 29
     },
     {
