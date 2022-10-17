@@ -707,11 +707,11 @@
     {
       "id_col": 65,
       "cat_col": 3,
-      "nom_col": "Côte de Cazès",
-      "nb_km": 3.3,
-      "poucentage_moyen": 6.6,
-      "altitude": 395,
-      "situation_km": 69.5,
+      "nom_col": "Côte de Saissac",
+      "nb_km": 6,
+      "poucentage_moyen": 5.1,
+      "altitude": 481,
+      "situation_km": 72,
       "img_profil_col": "",
       "id_etape": 14
     },

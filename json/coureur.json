@@ -105,7 +105,7 @@
       "nom_coureur": "BENNETT",
       "prenom_coureur": "George",
       "date_naissance": "1990-04-07",
-      "img_coureur": "g_bennett.png",
+      "img_coureur": "bennett.png",
       "est_present": true,
       "id_pays": 24,
       "id_equipe": 2
@@ -427,7 +427,7 @@
       "date_naissance": "1998-03-25",
       "img_coureur": "dainese.png",
       "est_present": true,
-      "id_pays": 16,
+      "id_pays": 7,
       "id_equipe": 6
     },
     {
@@ -1986,12 +1986,12 @@
     },
     {
       "id_coureur": 79,
-      "nom_coureur": "PEDERSEN",
-      "prenom_coureur": "Casper",
-      "date_naissance": "1996-03-15",
-      "img_coureur": "c_pedersen.png",
+      "nom_coureur": "MASNADA",
+      "prenom_coureur": "Fausto",
+      "date_naissance": "1993-11-06",
+      "img_coureur": "masnada.png",
       "est_present": false,
-      "id_pays": 6,
+      "id_pays": 7,
       "id_equipe": 8
     },
     {
@@ -2179,7 +2179,7 @@
       "nom_coureur": "JANSE VAN RENSBURG",
       "prenom_coureur": "Reinardt",
       "date_naissance": "1989-02-03",
-      "img_coureur": "perichon.png",
+      "img_coureur": "janse_van_rensburg.png",
       "est_present": false,
       "id_pays": 25,
       "id_equipe": 17
@@ -2209,7 +2209,7 @@
       "nom_coureur": "PRONSKIY",
       "prenom_coureur": "Vadim",
       "date_naissance": "1998-06-04",
-      "img_coureur": "perichon.png",
+      "img_coureur": "pronskiy.png",
       "est_present": false,
       "id_pays": 29,
       "id_equipe": 19
