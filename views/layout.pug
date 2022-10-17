@@ -3,6 +3,7 @@ html(lang=fr)
     head
         meta(CHARSET="UFT-8")
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="shortcut icon" href="/images/favicon.ico")
         title Tour de France 2023 imaginé
         block styles
             link(rel="stylesheet" href="/css/bootstrap.css")
@@ -14,7 +15,23 @@ html(lang=fr)
 
         div(class="container")
             block body
-                h2(style="color:black") Site d'un Tour de France 2023 imaginé
+                h2(style="color:white; text-align: center;") Tour de France 2023 imaginé
+                hr
+                div(class="countdown" style="background-color: #000; justify-content: space-evenly; height: 160px; position: relative;z-index: 100; color: #fff; display: flex; -webkit-box-align: center; align-items: center; overflow: hidden;")
+                    div(class="countdown__watch" style="background-image: url(/images/watch-tissot-transparent.png); background-repeat: no-repeat; width: 123px; height: 160px; position: relative;")
+                        div(class="timer" style="position: absolute; top: 60px; width: 100%; text-align: center; font-size: 1.6rem;")
+                            div(class="js-countdown")
+                                span(id="cd-days")
+                                br
+                                span(id="timer")
+                                script(src="/js/timer.js")
+
+                    div(class="countdown__content" style="text-align: center;")
+                        a(href="https://www.tissotwatches.com/en-en/tour-de-france.html?jnbc?utm_source=aso&amp;utm_medium=banner&amp;utm_content=banner&amp;utm_campaign=int_tour_de_france" target="_blank" data-xtclick="slider::countdown::timekeeper" data-clicktype="N" style="color: #000; text-decoration: none; background-color: transparent;")
+                            img(src="/images/logo_countdown.png" alt="logo tissot" class="logo-tissot" style="width: 120px; vertical-align: middle;")
+
+                        span(class="badge edition is-medium" style="font-size: 1.6rem; width: auto; margin-top: 13px; display: block; vertical-align: middle; text-transform: uppercase; font-weight: 800; color: #000; background-color: #ff0; padding: 4px 15px; line-height: 1.4;") Départ de l'édition 2023
+                        div(class="date-from-date-to one-date" style="font-size: 1.1em; margin-top: 10px;") 01/07/2023
 
         block scripts
             script(src="/js/jquery-3.5.1.slim.min.js")

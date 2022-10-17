@@ -1,0 +1,76 @@
+extends layout.pug
+block body
+    div(class="pageHeader content-header has-image no-logo")
+        div(class="filter")
+            div(class="row pageNav")
+                div(class="col pageNav--prev" style="text-align: left; margin: auto; font-size: 24px;")
+                    if etape.id_etape !== 1
+                        a(href=`/etapes/etape-${etape.id_etape - 1}` data-clicktype="N"  style="vertical-align: top;")
+                            b
+                                svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16")
+                                    path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
+
+                div(class="col-8 pageNav--header" style="text-align: center;")
+                    a(id="dateEtape" style="background-color: yellow;")= etape.date_etape
+                    h2= etape.libelle_etape
+                    h4= etape.villes
+
+                    div(class="row")
+                        div(class="col-6" style="text-align: left; font-size: 15px")
+                            a(style="font-size: 11px") Longueur
+                            br
+                            = etape.longueur + " km"
+
+                        div(class="col-6" style="text-align: right; font-size: 15px")
+                            a(style="font-size: 11px") Type
+                            br
+                            = etape.type_etape
+
+                div(class="col pageNav--next" style="text-align: right; margin: auto; font-size: 24px")
+                    if etape.id_etape !== 21
+                        a(href=`/etapes/etape-${ etape.id_etape + 1 }` data-clicktype="N"  style="vertical-align: top;")
+                            b
+                                svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16")
+                                    path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z")
+
+        hr
+        div(class="description-etape")
+            = etape.descriptif
+            br
+            img(src=`/images/etapes/tdf-2023-etape-${ etape.id_etape }.png` style="height: 400px; display: block; margin-left: auto; margin-right: auto;")
+
+        hr
+        div(id="carouselControls" class="carousel slide" data-bs-ride="carousel")
+            div(class="carousel-inner" style="margin: auto;")
+                each col in cols
+                    - var className = "carousel-item";
+                    if(col.id_col === min_col_id)
+                        - className = "carousel-item active";
+
+                    div(style="background-color: grey; text-align: center" class=`${className}`)
+                        br
+                        h3
+                            if(col.cat_col === 0)
+                                = col.nom_col + " (Hors catégorie)"
+                            else if (col.cat_col !== null)
+                                = col.nom_col + " (" + col.cat_col + "e catégorie)"
+
+                        h5= "Km " + col.situation_km + " - " + col.altitude + "m"
+                        if (col.nb_km < 1)
+                            = col.nb_km * 1000 + "m de montée à " + col.poucentage_moyen + " %"
+                            br
+                            br
+                        else
+                            = col.nb_km + "km de montée à " + col.poucentage_moyen + " %"
+                            br
+                            br
+
+                        if col.img_profil_col !== ''
+                            img(src=`/images/etapes/${col.img_profil_col}` class="d-block w-100" style="max-height: 50%; max-width: 50%; margin-left: auto; margin-right: auto;")
+                            br
+
+                button(class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev")
+                    span(class="carousel-control-prev-icon" aria-hidden="true")
+
+                button(class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next")
+                    span(class="carousel-control-next-icon" aria-hidden="true")

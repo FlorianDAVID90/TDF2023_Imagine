@@ -1,7 +1,30 @@
-h1 { color: #28B3FB;}
+:root {
+    --underline-intrinsic-width: 8;
+    --underline-width: 10;
+    --underline-color: #ff0;
+    --underline-cap-width: 4px;
+    --underline-offset-y: -2px;
+    --underline-padding-x: 0.12em;
+}
+
+a:hover,
+a:focus {
+    color: #ff0;
+}
+
+.nav-link {
+    --underline-color: #ff0;
+    transition: all .2s ease-in-out;
+}
+
+svg:hover {
+    color: #ff0;
+    transition: all 1s ease-out;
+}
 
 body {
     background-color: white;
+    color: black;
 }
 
 br , h2 {
@@ -26,7 +49,11 @@ table {
 .image_nav {
     height: 31px;
     width: 40px;
-    padding-right: 5px;
+}
+
+.image_nav_uci {
+    height: 7px;
+    width: 40px;
 }
 
 .rating {
@@ -56,4 +83,28 @@ table {
 }
 .rating2 a {
     float:none
+}
+
+.social-networks {
+    height: 25px;
+    justify-content: space-between;
+    text-align: center;
+    horiz-align: center;
+}
+
+.is-subnav-open .header .header-container__dates .dates {
+    box-shadow: 0 0 27px rgba(0, 0, 0, .1);
+}
+
+.header .header-container__dates .dates {
+    width: 100px;
+    height: 37px;
+    transform: skew(-18deg);
+    background: #ff0;
+    color: #000;
+    font-weight: 800;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 37px;
+    border-radius: 7px 0;
 }

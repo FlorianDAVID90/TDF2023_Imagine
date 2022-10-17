@@ -1,0 +1,64 @@
+extends layout.pug
+block body
+    div(class="pageHeader content-header has-image no-logo")
+        div(class="filter")
+        div(class="row pageNav")
+            div(class="col-3 pageNav--prev" style="text-align: left; margin: auto; font-size: 24px")
+                if equipe.id_equipe === first_equipe.id_equipe
+                    a(href=`/equipes/equipe/${ last_equipe.abrev_equipe }` data-clicktype="N"  style="vertical-align: top")
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
+
+                        span(class="hidden--xs")= last_equipe.nom_equipe
+
+                else
+                    a(href=`/equipes/equipe/${ prev_equipe.abrev_equipe }` data-clicktype="N")
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
+
+                        span(class="hidden--xs")= prev_equipe.nom_equipe
+
+            div(class="col-6 pageNav--header")
+                h2(style="text-align: center;")= equipe.nom_equipe
+                h4(style="text-align: center;")
+                    object(data=`/images/pays/${equipe.drapeau_svg}.svg` width="24" height="18")
+                    = " " + equipe.nom_pays
+
+
+            div(class="col-3 pageNav--next" style="text-align: right; margin: auto; font-size: 24px")
+                if equipe.id_equipe === last_equipe.id_equipe
+                    a(href=`/equipes/equipe/${ first_equipe.abrev_equipe }` data-clicktype="N")
+                        span(class="hidden--xs")= first_equipe.nom_equipe
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z")
+
+                else
+                    a(href=`/equipes/equipe/${ next_equipe.abrev_equipe }` data-clicktype="N")
+                        span(class="hidden--xs")= next_equipe.nom_equipe
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z")
+
+    hr
+    div(class="row")
+        each coureur in coureurs
+            div(class="card col-3 mt-3")
+                img(src=`/images/coureurs/${coureur.img_coureur}` style="height: 100px; width: 100px; object-fit: cover; object-position: 50% 0;")
+                a(href=`/coureur/${coureur.id_coureur}`)
+                    = coureur.id_coureur + " "
+                    object(data=`/images/pays/${ coureur.drapeau_svg }.svg` width="14" height="10.5")
+                    = " " + coureur.prenom_coureur + " " + coureur.nom_coureur
+
+                = coureur.date_naissance
+
+    hr
+    button(class="btn btnRempl btn-outline-warning align-content-center" style="text-align: center;") Remplaçants
+    hr
+    div(class="row")
+        each remplacant in remplacants
+            div(class="card col-3 mt-3")
+                img(src=`/images/coureurs/${remplacant.img_coureur}` style="height: 100px; width: 100px; object-fit: cover; object-position: 50% 0;")
+                a(href=`/coureur/remplacant${remplacant.id_coureur}`)
+                    object(data=`/images/pays/${remplacant.drapeau_svg}.svg` width="14" height="10.5")
+                    = " " + remplacant.prenom_coureur + " " + remplacant.nom_coureur
+
+                = remplacant.date_naissance
