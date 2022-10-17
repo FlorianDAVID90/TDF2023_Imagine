@@ -1,70 +1,52 @@
-const db = require("./db");
 const express = require("express");
-const ejs = require('ejs');
 const strftime = require('strftime');
-const {JSON} = require("mysql/lib/protocol/constants/types");
 const appError = require("./utils/appError")
+
+const etapesJSON = require("./json/etape.json");
+const typeEtapesJSON = require("./json/type_etape.json")
+const villesJSON = require("./json/ville.json")
+const equipesJSON = require("./json/equipe.json");
+
+const etapesRouter = require('./routers/etapes.routes')
+const equipesRouter = require('./routers/equipes.routes')
 
 require("dotenv").config();
 const tdf = express();
-
-//db.connect('localhost','flodavid','#Apoal75','tdf2023_html');
 
 tdf.use(express.json());
 tdf.use(express.urlencoded({ extended: true }))
 tdf.use(express.static(`${__dirname}/public`))
 
+tdf.use('/etapes', etapesRouter)
+tdf.use('/equipes', equipesRouter)
+//tdf.use('/coureurs', coureursRouter)
+
 tdf.set('views', `${__dirname}/views/`)
 tdf.set('view engine','pug');
-tdf.engine("pug",ejs.renderFile);
 
-function get_allEtapes() {
-    const etapesJSON = require("./json/etape.json");
-    const villesJSON = require("./json/ville.json")
-    let etapes = [];
-    for(let i = 0; i < 21; i++) {
-        const date = strftime('%d/%m/%y',etapesJSON.etape[i].date_etape);
-        const libelle = JSON.parse(etapesJSON.etape[i].libelle_etape);
-        const villes = JSON.parse(villesJSON.ville_depart[i].libelle_ville_depart) + " > " + JSON.parse(villesJSON.ville_arrivee[i].libelle_ville_arrivee)
-        const long = JSON.parse(etapesJSON.etape[i].longueur) + " km";
-
-        let type_etape = "";
-        for(let j = 0; j < 6; j++) {
-            if(j === JSON.parse(etapesJSON.etape[i].id_type_etape)) {
-                type_etape = JSON.parse(etapesJSON.type_etape[j].libelle_type_etape);
-            }
-        }
-
-        etapes.push(date + " | " + libelle + " | " + villes + " | " + long + " | " + type_etape)
-    }
-    return etapes;
-}
-
-function get_allEquipes() {
-    const equipesJSON = require("./json/equipe.json");
-    let maillots = [];
-    let names = [];
-    let abrevs = [];
-
-    for(let i = 0; i < 22; i++) {
-        names.push(JSON.parse(equipesJSON.equipe[i].nom_equipe));
-        maillots.push(JSON.parse(equipesJSON.equipe[i].img_maillot_equipe));
-        abrevs.push(JSON.parse(equipesJSON.equipe[i].abrev_equipe))
-    }
-
-    let equipes = [];
-    equipes.push(names,maillots,abrevs);
-    return equipes;
-}
+let etapes = require('./services/etapes.services').get_allEtapes();
+let equipes = require('./services/equipes.services').get_allEquipes();
+let repos = []
+villesJSON["ville_repos"].forEach((jRepos) => {
+    repos.push({
+        id_repos: jRepos["id_ville_repos"],
+        nom_ville_repos: jRepos["nom_ville_repos"],
+        date_repos: strftime('%d/%m/%Y', new Date(jRepos["date_repos"]))
+    });
+})
 
 tdf.get('/', (req, res) => {
-    const etapes = get_allEtapes();
-    const equipes = get_allEquipes();
-    res.render('layout.pug', etapes, equipes);
+    res.render('layout.pug', { etapes, equipes });
 });
 
 tdf.get('/carte-TDF-2023', (req, res) => {
-    res.render('show_carte.html');
+    let nbKm = 0;
+    etapesJSON["etape"].forEach((etape) => {
+        nbKm += etape["longueur"];
+    })
+    let dateDebut = "01/07/2023", dateFin = "24/07/2023";
+    let dates = dateDebut + " > " + dateFin
+    res.render('show_carte.pug', { etapes, equipes, repos, nbKm, dates });
 });
 
 tdf.all("*",(req, res, next) => {
