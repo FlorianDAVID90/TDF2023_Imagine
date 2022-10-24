@@ -45,10 +45,5 @@
     {"id_ville_arrivee": 19,"libelle_ville_arrivee": "Val-Cenis","id_pays": 1},
     {"id_ville_arrivee": 20,"libelle_ville_arrivee": "La Plagne","id_pays": 1},
     {"id_ville_arrivee": 21,"libelle_ville_arrivee": "Paris Champs-Élysées","id_pays": 1}
-  ],
-
-  "ville_repos": [
-    {"id_ville_repos": 1,"nom_ville_repos": "Département du Puy-de-Dôme","date_repos": "2023-07-10"},
-    {"id_ville_repos": 2,"nom_ville_repos": "Nîmes","date_repos": "2023-07-17"}
   ]
 }

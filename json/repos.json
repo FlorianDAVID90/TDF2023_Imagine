@@ -1,0 +1,22 @@
+{
+  "repos": [
+    {
+      "id_repos": 1,
+      "libelle_repos": "Repos 1",
+      "ville_repos": "Plateau de l'Aubrac",
+      "date_repos": "2023-07-10",
+      "description": "Situé aux confins de 2 régions : Auvergne-Rhône Alpes et l'Occitanie, le plateau de l’Aubrac s’étend sur 3 départements : Lozère, Cantal et Aveyron. De petite superficie, 40 km sur 20 km, il est limité au nord par les gorges de la Truyère et au sud par la vallée du Lot. D’une altitude moyenne de 1000 mètres, l’Aubrac culmine à 1469 mètres au signal de Mailhebiau et 1440 mètres aux Trucs d’Aubrac. Forêts et immenses pâturages se partagent l’espace. Cette entité à part, à l'identité très forte est devenue en 2018 le Parc naturel régional de l'Aubrac. Un fondement essentiel pour le devenir de ce territoire si particulier.",
+      "endroits_visit": ["- Espace Naturel Sensible du Puy de la Tuile et son panorama à 360°","- Cascade du Déroc :","La route des Lacs","- Cité thermale de Chaudes-Aigues où les eaux chaudes jaillissent à 82 °C","- Gorges du Bès","- Le bourg de Laguiole, son taureau, ses couteaux, sa coopérative fromagère Jeune Montagne","- Les nombreux sentiers de randonnées. Pour les marcheurs le Chemin de St-Jacques de Compostelle ou l'itinéraire sur plusieurs jours « Aubrac au coeur »","- les activités de pleine nature « Aubrac 4 saisons »","Plus d'infos sur https://aveyron.com/aubrac"],
+      "img_repos": "aubrac.png"
+    },
+    {
+      "id_repos": 2,
+      "libelle_repos": "Repos 2",
+      "ville_repos": "Nîmes",
+      "date_repos": "2023-07-17",
+      "description": " ",
+      "endroits_visit": ["Arènes de Nîmes","Les Jardins de la Fontaine","Maison Carrée","Tour Magne","Musée de la Romanité","Pont du Gard","Les Halles de Nîmes","Cathédrale Notre-Dame-et-Saint-Castor","Temple de Diane","Plus d'infos sur https://www.nimes-tourisme.com/fr/"],
+      "img_repos": "nimes.png"
+    }
+  ]
+}

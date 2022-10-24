@@ -675,7 +675,7 @@
       "nom_coureur": "HERRADA",
       "prenom_coureur": "Jesús",
       "date_naissance": "1990-07-26",
-      "img_coureur": "herrada",
+      "img_coureur": "herrada.png",
       "est_present": true,
       "id_pays": 2,
       "id_equipe": 9
@@ -685,7 +685,7 @@
       "nom_coureur": "IZAGUIRRE",
       "prenom_coureur": "Ion",
       "date_naissance": "1989-02-04",
-      "img_coureur": "izaguirre.png",
+      "img_coureur": "i_izaguirre.png",
       "est_present": true,
       "id_pays": 2,
       "id_equipe": 9
@@ -1246,7 +1246,7 @@
       "nom_coureur": "PASQUALON",
       "prenom_coureur": "Andrea",
       "date_naissance": "1988-01-02",
-      "img_coureur": "pasqaulon.png",
+      "img_coureur": "pasqualon.png",
       "est_present": true,
       "id_pays": 7,
       "id_equipe": 16
@@ -1556,7 +1556,7 @@
       "nom_coureur": "LÓPEZ",
       "prenom_coureur": "Juan Pedro",
       "date_naissance": "1997-07-31",
-      "img_coureur": "jp_lopez.png",
+      "img_coureur": "lopez.png",
       "est_present": true,
       "id_pays": 2,
       "id_equipe": 20
@@ -1576,7 +1576,7 @@
       "nom_coureur": "SIMMONS",
       "prenom_coureur": "Quinn",
       "date_naissance": "2001-05-08",
-      "img_coureur": "simmons",
+      "img_coureur": "simmons.png",
       "est_present": true,
       "id_pays": 10,
       "id_equipe": 20
@@ -2109,7 +2109,7 @@
       "nom_coureur": "GUERNALEC",
       "prenom_coureur": "Thibault",
       "date_naissance": "1997-07-31",
-      "img_coureur": "gurnalec.png",
+      "img_coureur": "guernalec.png",
       "est_present": false,
       "id_pays": 1,
       "id_equipe": 14
@@ -2259,7 +2259,7 @@
       "nom_coureur": "HAMILTON",
       "prenom_coureur": "Lucas",
       "date_naissance": "1996-02-12",
-      "img_coureur": "hamilton.png",
+      "img_coureur": "l_hamilton.png",
       "est_present": false,
       "id_pays": 13,
       "id_equipe": 21
