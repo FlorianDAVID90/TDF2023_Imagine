@@ -15,7 +15,7 @@ html(lang=fr)
 
         div(class="container")
             block body
-                h2(style="color:white; text-align: center;") Tour de France 2023 imaginé
+                h2(style="text-align: center;") Tour de France 2023 imaginé
                 hr
                 div(class="countdown" style="background-color: #000; justify-content: space-evenly; height: 160px; position: relative;z-index: 100; color: #fff; display: flex; -webkit-box-align: center; align-items: center; overflow: hidden;")
                     div(class="countdown__watch" style="background-image: url(/images/watch-tissot-transparent.png); background-repeat: no-repeat; width: 123px; height: 160px; position: relative;")
@@ -32,6 +32,12 @@ html(lang=fr)
 
                         span(class="badge edition is-medium" style="font-size: 1.6rem; width: auto; margin-top: 13px; display: block; vertical-align: middle; text-transform: uppercase; font-weight: 800; color: #000; background-color: #ff0; padding: 4px 15px; line-height: 1.4;") Départ de l'édition 2023
                         div(class="date-from-date-to one-date" style="font-size: 1.1em; margin-top: 10px;") 01/07/2023
+
+                    div(class="countdown__logo" style="text-align: center;")
+                        img(src="/images/gd2023_white.png" height="160")
+                hr
+                div(class="logo_gd_black" style="text-align: center;")
+                    img(src="/images/gd2023_black.png")
 
         block scripts
             script(src="/js/jquery-3.5.1.slim.min.js")

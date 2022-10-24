@@ -1,7 +1,7 @@
 extends layout.pug
 block body
     div(class="parcours")
-        h2(style="color: white;") Parcours 2023
+        h2(style="text-align: center;") Parcours 2023
         img(src="/images/TDF2023Carte.png" style="display: block; margin-left: auto; margin-right: auto; width: 651.5px; height: 814px;")
         h5= "Total : " + nbKm + " km"
         hr
@@ -32,12 +32,12 @@ block body
                             if etape.id_etape === 9 + 6*(jour.id_repos - 1)
                                 tr(style="background-color: orange;")
                                     td
-                                    td= "Repos " + jour.id_repos
+                                    td= jour.libelle_repos
                                     td= jour.date_repos
-                                    td= jour.nom_ville_repos
+                                    td= jour.ville_repos
                                     td
                                     td
-                                        a(href=`/repos/${jour.id_repos}` class="btn btn-sm btn-outline-dark align-content-center" data-bs-toogle="button")= "Repos " + jour.id_repos
+                                        a(href=`/repos/repos-${jour.id_repos}` class="btn btn-sm btn-outline-dark align-content-center" data-bs-toogle="button")= "Repos " + jour.id_repos
 
         hr
         div(class="details-carte")

@@ -1,0 +1,29 @@
+extends layout.pug
+block body
+    div(class="pageHeader content-header has-image no-logo")
+        div(class="filter")
+            div(class="row pageNav")
+                //div(class="col pageNav--prev" style="text-align: left; margin: auto; font-size: 24px;")
+                    if jRepos.id_etape !== 1
+                        a(href=`/etapes/etape-${etape.id_etape - 1}` data-clicktype="N"  style="vertical-align: top;")
+                            b
+                                svg(xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16")
+                                    path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
+
+                div(class="col-12 pageNav--header" style="text-align: center;")
+                    a(style="background-color: yellow;")= jRepos.date_repos
+                    h2= jRepos.libelle_repos
+                    h4= jRepos.ville_repos
+
+        hr
+        div(class="description-etape")
+            b= jRepos.description
+            hr
+            h6 À voir, à faire
+            ul
+                each endroit in jRepos.endroits_visit
+                    li= endroit
+
+            hr
+            img(src=`/images/${ jRepos.img_repos }` style="height: 400px; display: block; margin-left: auto; margin-right: auto;")
+        hr

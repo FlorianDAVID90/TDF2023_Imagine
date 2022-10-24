@@ -1,0 +1,43 @@
+extends layout.pug
+block body
+    div(class="pageHeader content-header has-image no-logo")
+        div(class="filter")
+        div(class="row pageNav")
+            div(class="col-4 pageNav--prev" style="text-align: left; margin: auto; font-size: 24px")
+                if coureur.id_coureur === first_coureur.id_coureur
+                    a(href=`/coureurs/coureur-${last_coureur.id_coureur}` data-clicktype="N"  style="vertical-align: top")
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
+
+                        span(class="hidden--xs")= last_coureur.prenom_coureur + " " + last_coureur.nom_coureur
+
+                else
+                    a(href=`/coureurs/coureur-${prev_coureur.id_coureur}` data-clicktype="N"  style="vertical-align: top")
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
+
+                        span(class="hidden--xs")= prev_coureur.prenom_coureur + " " + prev_coureur.nom_coureur
+
+            div(class="col-4 pageNav--header")
+                h2(style="text-align: center;")= coureur.prenom_coureur + " " + coureur.nom_coureur
+                h4(style="text-align: center;")
+                    object(data=`/images/pays/${coureur.drapeau_svg}.svg` width="24" height="18")
+                    = " " + coureur.pays_coureur
+
+
+            div(class="col-4 pageNav--next" style="text-align: right; margin: auto; font-size: 24px")
+                if coureur.id_coureur === last_coureur.id_coureur
+                    a(href=`/coureurs/coureur-${first_coureur.id_coureur}` data-clicktype="N")
+                        span(class="hidden--xs")= first_coureur.prenom_coureur + " " + first_coureur.nom_coureur
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z")
+
+                else
+                    a(href=`/coureurs/coureur-${next_coureur.id_coureur}` data-clicktype="N")
+                        span(class="hidden--xs")= next_coureur.prenom_coureur + " " + next_coureur.nom_coureur
+                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16")
+                            path(fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z")
+
+    hr
+    div(class="body_coureur" style="text-align: center;")
+        img(src=`/images/coureurs/${coureur.img_coureur}` style="height: 455px; width: 300px; object-fit: cover; object-position: 50% 0;")

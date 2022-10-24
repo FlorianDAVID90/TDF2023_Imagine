@@ -11,7 +11,7 @@ block body
                                     path(fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z")
 
                 div(class="col-8 pageNav--header" style="text-align: center;")
-                    a(id="dateEtape" style="background-color: yellow;")= etape.date_etape
+                    a(style="background-color: yellow;")= etape.date_etape
                     h2= etape.libelle_etape
                     h4= etape.villes
 
@@ -38,6 +38,20 @@ block body
             = etape.descriptif
             br
             img(src=`/images/etapes/tdf-2023-etape-${ etape.id_etape }.png` style="height: 400px; display: block; margin-left: auto; margin-right: auto;")
+
+        hr
+        .sporting__content
+            #map.sporting__content__item.map.tabs__content.js-tabs-content.is-active
+                .media__item.media__item--iframe
+                    .media__responsive.media__responsive--4by3
+                        iframe.media__responsive__item.js-lazy.is-loaded(scrolling='no' allowfullscreen='' allow='geolocation' src='https://www.arcgis.com/apps/instant/basic/index.html?appid=654f4800ecf1436189e200f89a945f8f' width='100%' height='600px' frameborder="0" style="border:0")
+            #itinerary.sporting__content__item.itinerary.tabs__content.js-tabs-content
+
+
+        hr
+        div(class="video_profile" style="text-align: center;")
+            video(controls height="400")
+                source(src=`/videos/tdf-2023-etape-${etape.id_etape}.mp4` type="video/mp4")
 
         hr
         div(id="carouselControls" class="carousel slide" data-bs-ride="carousel")
@@ -69,8 +83,9 @@ block body
                             img(src=`/images/etapes/${col.img_profil_col}` class="d-block w-100" style="max-height: 50%; max-width: 50%; margin-left: auto; margin-right: auto;")
                             br
 
-                button(class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev")
-                    span(class="carousel-control-prev-icon" aria-hidden="true")
+                if (cols.length > 1)
+                    button(class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev")
+                        span(class="carousel-control-prev-icon" aria-hidden="true")
 
-                button(class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next")
-                    span(class="carousel-control-next-icon" aria-hidden="true")
+                    button(class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next")
+                        span(class="carousel-control-next-icon" aria-hidden="true")
