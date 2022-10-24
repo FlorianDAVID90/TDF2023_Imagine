@@ -7,6 +7,7 @@ const etapesRouter = require('./routers/etapes.routes')
 const equipesRouter = require('./routers/equipes.routes')
 const reposRouter = require('./routers/repos.routes')
 const coureursRouter = require('./routers/coureurs.routes')
+const tdfRouter = require('./routers/tdf.routes')
 
 require("dotenv").config();
 const tdf = express();
@@ -19,6 +20,7 @@ tdf.use('/etapes', etapesRouter)
 tdf.use('/equipes', equipesRouter)
 tdf.use('/repos', reposRouter)
 tdf.use('/coureurs', coureursRouter)
+tdf.use('/apps', tdfRouter)
 
 tdf.set('views', `${__dirname}/views/`)
 tdf.set('view engine','pug');
@@ -42,7 +44,11 @@ tdf.get('/carte-TDF-2023', (req, res) => {
 });
 
 tdf.all("*",(req, res, next) => {
-    throw new appError(`Requested URL ${req.path} not found !`, 404);
+    if(req.path.includes("images/coureurs")) {
+        req.path = "images/coureurs/default-profil.png"
+    } else {
+        throw new appError(`Requested URL ${req.path} not found !`, 404);
+    }
 })
 
 const port = process.env.PORT

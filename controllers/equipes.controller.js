@@ -30,8 +30,8 @@ exports.showEquipe = (req, res) => {
 
         let etapes = require('../services/etapes.services').get_allEtapes();
         let equipes = new equipesServices.get_allEquipes();
-        let coureurs = require('../services/coureurs.service').getCoureursFromEquipe(idAbr);
-        let remplacants = require('../services/coureurs.service').getRemplacantsFromEquipe(idAbr);
+        let coureurs = require('../services/coureurs.services').getCoureursFromEquipe(idAbr);
+        let remplacants = require('../services/coureurs.services').getRemplacantsFromEquipe(idAbr);
 
         let equipe = results[idAbr - 1], last_equipe = results[22], first_equipe = results[0]
         let prev_equipe = results[idAbr - 2], next_equipe = results[idAbr]

@@ -62,7 +62,7 @@ class Coureur {
             || !data.hasOwnProperty("img_coureur")
             || typeof data.img_coureur !== 'string'
             || !data.hasOwnProperty("est_present")
-            || (typeof data.id_coureur !== 'string' && typeof data.id_coureur !== 'boolean')
+            || (typeof data.est_present !== 'string' && typeof data.est_present !== 'boolean')
             || !data.hasOwnProperty("id_pays")
             || (typeof data.id_pays !== 'string' && typeof data.id_pays !== 'number')
             || !data.hasOwnProperty("id_equipe")

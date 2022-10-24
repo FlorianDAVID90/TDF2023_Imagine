@@ -2,6 +2,7 @@ const strftime = require("strftime");
 const coureursModel = require('../model/coureurs.model')
 const coureursJSON = require("../json/coureur.json");
 const paysJSON = require("../json/pays.json")
+const equipesJSON = require("../json/equipe.json");
 
 class AllCoureurs extends coureursModel.Coureur {
     async list(callback) {
@@ -29,6 +30,26 @@ class AllCoureurs extends coureursModel.Coureur {
             return [];
         }
     }
+}
+
+function get_coureur(id) {
+    let coureur;
+
+    coureursJSON["coureur"].forEach((cour) => {
+        if("" + cour["id_coureur"] === "" + id)
+            coureur = {
+                id_coureur: id,
+                nom_coureur: cour["nom_coureur"],
+                prenom_coureur: cour["prenom_coureur"],
+                date_naissance: strftime('%d/%m/%Y', new Date(cour["date_naissance"])),
+                img_coureur: cour["img_coureur"],
+                est_present: cour["est_present"],
+                nom_pays: paysJSON["pays"][cour["id_pays"] - 1]["nom_pays"],
+                drapeau_svg: paysJSON["pays"][cour["id_pays"] - 1]["drapeau_svg"],
+                equipe: equipesJSON["equipe"][cour["id_equipe"] - 1]["nom_equipe"]
+            };
+    })
+    return coureur;
 }
 
 function getCoureursFromEquipe(id) {

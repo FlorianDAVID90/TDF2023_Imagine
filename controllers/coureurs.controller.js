@@ -1,6 +1,8 @@
-const coureursServices = require('../services/coureurs.service')
-const equipesServices = require("../services/equipes.services");
-const coureursJSON = require("../json/coureur.json");
+const coureursServices = require('../services/coureurs.services')
+const etapeServices = require("../services/etapes.services");
+let etapes = new etapeServices.get_allEtapes()
+let equipes = require("../services/equipes.services").get_allEquipes();
+const coureursJSON = require('../json/coureur.json')
 
 function detectError(req, res, error, results) {
     if (error) {
@@ -22,23 +24,14 @@ exports.showCoureur = (req, res) => {
             console.log(error);
             return res.status(400).send(`<h1 style="color: green">ERROR 400: ${{success: 0, data: error}}</h1>`);
         }
-        return res.status(400).send(`<h1 style="color: green">Yes ${{success: 1, data: results}}</h1>`);
-        /*let idAbr;
-        equipesJSON["equipe"].forEach((equipe) => {
-            if("" + req.params['abr'] === "" + equipe["abrev_equipe"])
-                idAbr = equipe["id_equipe"];
-        })
 
-        let etapes = require('../services/etapes.services').get_allEtapes();
-        let equipes = new equipesServices.get_allEquipes();
-        let coureurs = require('../services/coureurs.service').getCoureursFromEquipe(idAbr);
-        let remplacants = require('../services/coureurs.service').getRemplacantsFromEquipe(idAbr);
+        const index = results.findIndex(cour => "" + cour["id_coureur"] === "" + req.params.id)
 
-        let equipe = results[idAbr - 1], last_equipe = results[22], first_equipe = results[0]
-        let prev_equipe = results[idAbr - 2], next_equipe = results[idAbr]
+        let coureur = results[index]
+        let last_coureur = results[results.length - 1], first_coureur = results[0]
+        let prev_coureur = results[index - 1], next_coureur = results[index + 1]
 
-        return res.render('show_coureur.pug', {etapes, equipes, coureurs, remplacants, equipe,
-            last_equipe, first_equipe, prev_equipe, next_equipe})*/
+        return res.render('show_coureur.pug', {etapes, equipes, coureur, last_coureur, first_coureur, prev_coureur, next_coureur})
     }).then();
 }
 
